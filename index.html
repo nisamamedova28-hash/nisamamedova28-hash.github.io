@@ -1,0 +1,89 @@
+<h2>Услуги</h2>
+
+<p>Я создаю визуальный контент в оффлайн и онлайн формате, а также работаю с AI и нейросетями.</p>
+
+<!-- 1 -->
+<div>
+  <h3>Фотосессия (оффлайн) — 5000 ₽ / час</h3>
+  <button onclick="toggle('u1')">Подробнее</button>
+  <p id="u1" style="display:none;">
+    Оффлайн фотосессия в студии или на улице. Помогаю с позированием, идеей и образом.
+  </p>
+</div>
+
+<hr>
+
+<!-- 2 -->
+<div>
+  <h3>Нейрофотосессия — 500 ₽ / фото</h3>
+  <button onclick="toggle('u2')">Подробнее</button>
+  <p id="u2" style="display:none;">
+    Создание уникальных AI-образов по фото. Пакет 10 фото — 4000 ₽.
+  </p>
+</div>
+
+<hr>
+
+<!-- 3 -->
+<div>
+  <h3>Реставрация фото — 500 ₽</h3>
+  <button onclick="toggle('u3')">Подробнее</button>
+  <p id="u3" style="display:none;">
+    Восстановление старых и повреждённых фотографий.
+  </p>
+</div>
+
+<hr>
+
+<!-- 4 -->
+<div>
+  <h3>Оживление фото — 500 ₽</h3>
+  <button onclick="toggle('u4')">Подробнее</button>
+  <p id="u4" style="display:none;">
+    Анимация фотографии (движение, эмоции, эффект живого кадра).
+  </p>
+</div>
+
+<hr>
+
+<!-- 5 -->
+<div>
+  <h3>Мультсериал — 10 000 ₽ / серия</h3>
+  <button onclick="toggle('u5')">Подробнее</button>
+  <p id="u5" style="display:none;">
+    Создание AI-мультсцен до 30 секунд с персонажами и сюжетом.
+  </p>
+</div>
+
+<hr>
+
+<!-- 6 -->
+<div>
+  <h3>Съёмка Reels (онлайн) — 15 000 ₽</h3>
+  <button onclick="toggle('u6')">Подробнее</button>
+  <p id="u6" style="display:none;">
+    Пакет от 5 Reels: сценарий, съёмка и идеи под соцсети.
+  </p>
+</div>
+
+<hr>
+
+<!-- 7 -->
+<div>
+  <h3>Монтаж Reels — от 500 ₽</h3>
+  <button onclick="toggle('u7')">Подробнее</button>
+  <p id="u7" style="display:none;">
+    Монтаж видео под тренды, ритм и стиль.
+  </p>
+</div>
+
+<script>
+function toggle(id) {
+  var el = document.getElementById(id);
+  if (el.style.display === "none") {
+    el.style.display = "block";
+  } else {
+    el.style.display = "none";
+  }
+}
+</script>
