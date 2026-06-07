@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Creator | Фото и Рилс</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0d0d0d;
+    color: white;
+}
+
+header {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #7f00ff, #00c6ff);
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    transition: 0.3s;
+    border: 1px solid #2a2a2a;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00c6ff;
+}
+
+.price {
+    color: #00c6ff;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #00c6ff;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7f00ff;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.6;
+    font-size: 14px;
+}
+</style>
+
+<script>
+function info(text){
+    alert(text);
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>AI Creator / Фотограф / Рилсмейкер</h1>
+    <p>Создаю визуальный контент, который продаёт</p>
+</header>
+
+<div class="container">
+
+<h2>Мои услуги</h2>
+
+<div class="card">
+    <h3>Фотосессия оффлайн</h3>
+    <p class="price">5000 ₽ / час</p>
+    <button onclick="info('Съёмка в студии или на улице. Подбор поз и идеи.')">Подробнее</button>
+</div>
+
+<div class="card">
+    <h3>Нейрофотосессия</h3>
+    <p class="price">500 ₽ / фото (10 фото — 4000 ₽)</p>
+    <button onclick="info('Создание AI-фото и уникальных образов.')">Подробнее</button>
+</div>
+
+<div class="card">
+    <h3>Реставрация фото</h3>
+    <p class="price">500 ₽</p>
+    <button onclick="info('Восстановление старых фотографий.')">Подробнее</button>
+</div>
+
+<div class="card">
+    <h3>Оживление фото</h3>
+    <p class="price">500 ₽ / фото</p>
+    <button onclick="info('Анимация фотографий.')">Подробнее</button>
+</div>
+
+<div class="card">
+    <h3>Мультсериал</h3>
+    <p class="price">10 000 ₽ / серия</p>
+    <button onclick="info('Создание AI мультсцен.')">Подробнее</button>
+</div>
+
+<div class="card">
+    <h3>Съёмка рилс</h3>
+    <p class="price">15 000 ₽ (от 5 рилс)</p>
+    <button onclick="info('Съёмка и создание видео для соцсетей.')">Подробнее</button>
+</div>
+
+<div class="card">
+    <h3>Монтаж рилс</h3>
+    <p class="price">от 500 ₽</p>
+    <button onclick="info('Монтаж коротких видео.')">Подробнее</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 AI Creator | Portfolio
+</footer>
+
+</body>
+</html>
