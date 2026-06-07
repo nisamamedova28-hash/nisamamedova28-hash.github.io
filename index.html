@@ -3,174 +3,236 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Creator | Портфолио</title>
+<title>Ultra Creator Studio</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0d0d0d;
-    color: white;
+body{
+margin:0;
+font-family:Arial;
+background:#070707;
+color:white;
+scroll-behavior:smooth;
 }
 
-header {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #7f00ff, #00c6ff);
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:radial-gradient(circle at top,#7f00ff,#000);
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.hero h1{
+font-size:56px;
+animation:fadeIn 2s ease;
 }
 
-header p {
-    opacity: 0.9;
+.hero p{
+opacity:0.8;
+max-width:600px;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
+.btn{
+margin-top:20px;
+padding:14px 28px;
+background:#00c6ff;
+color:black;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
 }
 
-h2 {
-    text-align: center;
-    margin: 40px 0 20px;
+.btn:hover{
+transform:scale(1.05);
 }
 
-/* УСЛУГИ */
-.card {
-    background: #1c1c1c;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    border: 1px solid #2a2a2a;
-    transition: 0.3s;
+/* SECTIONS */
+section{
+padding:90px 20px;
+max-width:1000px;
+margin:auto;
+opacity:0;
+transform:translateY(30px);
+transition:1s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: #00c6ff;
+section.show{
+opacity:1;
+transform:translateY(0);
 }
 
-.price {
-    color: #00c6ff;
-    font-weight: bold;
+h2{
+text-align:center;
+margin-bottom:30px;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 10px;
-    background: #00c6ff;
-    color: black;
-    cursor: pointer;
+/* SERVICES */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
-/* ПОРТФОЛИО */
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
+.card{
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:20px;
+border-radius:16px;
+transition:0.4s;
+backdrop-filter:blur(10px);
 }
 
-.portfolio img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
-    transition: 0.3s;
+.card:hover{
+transform:translateY(-10px);
+border-color:#00c6ff;
 }
 
-.portfolio img:hover {
-    transform: scale(1.05);
+/* PORTFOLIO */
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:10px;
 }
 
-/* КОНТАКТ */
-.contact a {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #00c6ff;
-    color: black;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+.portfolio img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:14px;
+cursor:pointer;
+transition:0.4s;
+}
+
+.portfolio img:hover{
+transform:scale(1.08);
+filter:brightness(1.2);
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.modal img{
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+}
+
+/* VIDEO */
+.video iframe{
+width:100%;
+height:420px;
+border-radius:14px;
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+}
+
+.contact a{
+display:inline-block;
+padding:14px 26px;
+background:#00c6ff;
+color:black;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
 }
 </style>
-
-<script>
-function info(text){
-    alert(text);
-}
-</script>
-
 </head>
 
 <body>
 
-<header>
-    <h1>AI Creator / Фотограф / Рилсмейкер</h1>
-    <p>Создаю визуальный контент, который продаёт</p>
-</header>
+<div class="hero">
+<h1>Ultra Creator Studio</h1>
+<p>Фотография • AI • Reels • Брендовый визуал уровня агентств</p>
+<a class="btn" href="#services">Смотреть услуги</a>
+</div>
 
-<div class="container">
-
+<section id="services">
 <h2>Услуги</h2>
 
-<div class="card">
-    <h3>Фотосессия оффлайн</h3>
-    <p class="price">5000 ₽ / час</p>
-    <button onclick="info('Съёмка в студии или на улице')">Подробнее</button>
+<div class="cards">
+<div class="card"><h3>Фотосессия</h3><p>5000 ₽</p></div>
+<div class="card"><h3>AI фото</h3><p>500 ₽</p></div>
+<div class="card"><h3>Reels</h3><p>15 000 ₽</p></div>
 </div>
+</section>
 
-<div class="card">
-    <h3>Нейрофотосессия</h3>
-    <p class="price">500 ₽ / фото (10 фото — 4000 ₽)</p>
-    <button onclick="info('AI генерация образов')">Подробнее</button>
-</div>
-
-<div class="card">
-    <h3>Реставрация фото</h3>
-    <p class="price">500 ₽</p>
-    <button onclick="info('Восстановление старых фото')">Подробнее</button>
-</div>
-
-<div class="card">
-    <h3>Оживление фото</h3>
-    <p class="price">500 ₽</p>
-    <button onclick="info('Анимация фото')">Подробнее</button>
-</div>
-
-<div class="card">
-    <h3>Съёмка рилс</h3>
-    <p class="price">15 000 ₽</p>
-    <button onclick="info('Съёмка видео контента')">Подробнее</button>
-</div>
-
-<div class="card">
-    <h3>Монтаж рилс</h3>
-    <p class="price">от 500 ₽</p>
-    <button onclick="info('Монтаж видео')">Подробнее</button>
-</div>
-
+<section id="portfolio">
 <h2>Портфолио</h2>
 
 <div class="portfolio">
-    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e">
-    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1">
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9">
+<img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" onclick="openImg(this)">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" onclick="openImg(this)">
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" onclick="openImg(this)">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" onclick="openImg(this)">
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" onclick="openImg(this)">
+<img src="https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5" onclick="openImg(this)">
+</div>
+</section>
+
+<section>
+<h2>Видео работы</h2>
+
+<div class="video">
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+</div>
+</section>
+
+<section class="contact">
+<h2>Связь</h2>
+<a href="https://t.me/yourusername">Написать в Telegram</a>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeImg()">
+<img id="modalImg">
 </div>
 
-<h2>Связь со мной</h2>
+<script>
+// modal
+function openImg(img){
+document.getElementById('modal').style.display='flex';
+document.getElementById('modalImg').src=img.src;
+}
 
-<div class="contact">
-    <a href="https://t.me/yourusername" target="_blank">Написать в Telegram</a>
-</div>
+function closeImg(){
+document.getElementById('modal').style.display='none';
+}
 
-</div>
+// scroll animation
+window.addEventListener('scroll',()=>{
+document.querySelectorAll('section').forEach(sec=>{
+let top=sec.getBoundingClientRect().top;
+if(top<600){sec.classList.add('show');}
+});
+});
+</script>
 
 </body>
 </html>
+Область прикрепленных файлов
+Предварительный просмотр видео Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)Предварительный просмотр видео Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster)
+
